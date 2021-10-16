@@ -1,0 +1,75 @@
+. Write a program in JavaScript that will take input from the user about the name of employees 
+working in the office and their salaries. Display the data on the screen. Furthermore the user should be 
+able to delete any person and update the salaries of the person. Also show the tax each employee has 
+to pay (Tax rate : 4%). The Program should display the employee name with max salary and min salary.
+(Do not use any database, attempt this question through arrays)
+
+let numberEmployees
+let tempName
+let tempSalary
+let empData
+let onlySalary;
+let EmpNameMax
+let EmpNameMin
+
+output Enter Number of Employee Name
+input numberEmployees
+
+for (let i=0;i<numberEmployees;i++)
+{
+	output Enter Name
+	input tempName
+	output Enter Salary
+	input tempSalary
+	empData.push({
+	name:tempName,
+	salary:tempSalary
+	})
+
+   onlySalary.push(tempSalary)
+}
+
+deleterUser=(uind)=>
+{
+	empData= empData.filter((val,ind)=> ind!=uind)
+}
+updateUser=(uind)=>
+{
+
+	output Enter Salary
+	input tempSalary
+	empData[uind]={
+	name:empData[uind].name,
+	salary:tempSalary
+	}
+}
+
+EmpNameMax=empData.filter((val,ind)=> 
+{if(val.salary==Math.max(...onlySalary)
+{
+returm val.name	
+}
+})
+output EmpNameMax
+output Max Salary Math.max(...onlySalary)
+EmpNameMin=empData.filter((val,ind)=> 
+{if(val.salary==Math.min(...onlySalary)
+{
+returm val.name	
+}
+})
+output EmpNameMin
+output Min Salary Math.min(...onlySalary)
+
+empData.map((val,ind)=>
+{
+return (
+	output Employee Name val.name
+    output Employee Salary val.salary
+    output Employee Tax    val.salary*0.04
+    button deleteUser(uind)
+    button updateUser(uind)
+    )
+
+})
+	
